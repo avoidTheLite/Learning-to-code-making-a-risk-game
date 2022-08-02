@@ -1,0 +1,31 @@
+/*
+
+Each turn:
+Check country ownership
+check continent ownership
+Determine reinforcements for player
+Player distributes reinforcements
+command phase [
+
+    Have to play card phase [
+        if (cards owned >=5) {
+            player must play card match}
+            else end phase 
+        
+    ]
+    Control Phase[
+         Play card match
+        Attack country
+    ]
+   
+    Tactical move phase [
+        Move any # from one country (keeping at least one) to another country 
+    ]
+    Card drawing phase [
+        Player draws card
+    ]
+]
+
+
+
+*/
