@@ -2,12 +2,13 @@
 
 Each turn:
 Check country ownership
-check continent ownership
-Determine reinforcements for player
-Player distributes reinforcements
+Check continent ownership
+Determine reinforcements for current_player
+Player distributes reinforcements to countries, if remaining=0, proceed
 command phase [
 
-    Have to play card phase [
+    Check if user must play cards [
+        check if card_hoarding house rule is active, if not
         if (cards owned >=5) {
             player must play card match}
             else end phase 
@@ -15,14 +16,19 @@ command phase [
     ]
     Control Phase[
          Play card match
-        Attack country
+        Attack countries
+        If number of available armies adjacent to enemy countries = 0, display "no more attacks"
     ]
    
     Tactical move phase [
-        Move any # from one country (keeping at least one) to another country 
+        if available_armies Move any # from one country (keeping at least one) to another country
+        If number of available_armies adjacent to current_player owned countries = 0, display "no moves available"
     ]
     Card drawing phase [
         Player draws card
+        update player card object with details and card_count
+    
+        display wether a match exists for current player
     ]
 ]
 
